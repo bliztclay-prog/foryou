@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <meta name="theme-color" content="#090909">
+  <title>For You</title>
+  <link rel="icon" type="image/png" href="assets/icon/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;1,300;1,400&family=Inter:wght@300;400&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <div id="cursor-dot"></div>
+  <div id="cursor-ring"></div>
+  <div id="vignette"></div>
+
+  <!-- Loading -->
+  <section id="loader" class="scene active">
+    <div class="loader-inner">
+      <div class="loader-heart">&#10084;</div>
+      <div class="loader-bar"><div class="loader-bar-fill"></div></div>
+    </div>
+  </section>
+
+  <!-- Opening -->
+  <section id="opening" class="scene">
+    <div class="opening-content">
+      <div class="opening-heart">&#10084;</div>
+      <p id="typewriter" class="typewriter-text"></p>
+      <button id="btn-start" class="btn-primary hidden" type="button">
+        <span class="btn-icon">&#10084;</span>
+        <span>Mulai</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Countdown -->
+  <section id="countdown" class="scene">
+    <p id="countdown-num" class="countdown-number"></p>
+  </section>
+
+  <!-- Video -->
+  <section id="video-scene" class="scene">
+    <div class="video-wrap">
+      <video id="main-video" playsinline preload="auto">
+        <source src="assets/video/video.mp4" type="video/mp4">
+      </video>
+      <div class="video-overlay"></div>
+      <div class="letterbox letterbox-top"></div>
+      <div class="letterbox letterbox-bottom"></div>
+    </div>
+    <div id="subtitle" class="subtitle hidden">
+      <p id="subtitle-text"></p>
+    </div>
+  </section>
+
+  <!-- Post Video -->
+  <section id="post-video" class="scene">
+    <p id="post-video-text" class="center-text"></p>
+  </section>
+
+  <!-- Gallery -->
+  <section id="gallery" class="scene">
+    <div class="gallery-frame">
+      <div class="gallery-photo-wrap">
+        <div class="gallery-zoom-layer">
+          <img id="gallery-img" class="gallery-img" src="" alt="">
+        </div>
+      </div>
+      <p id="gallery-caption" class="gallery-caption"></p>
+    </div>
+  </section>
+
+  <!-- Ending -->
+  <section id="ending" class="scene">
+    <canvas id="stars-canvas"></canvas>
+    <div class="ending-content">
+      <p id="ending-text" class="center-text"></p>
+      <div id="ending-names" class="ending-names hidden">
+        <p class="name-me"></p>
+        <p class="name-heart">&#10084;</p>
+        <p class="name-you"></p>
+        <p class="made-with">Made with love.</p>
+      </div>
+      <div id="ending-buttons" class="ending-buttons hidden">
+        <button id="btn-replay" class="btn-secondary" type="button">
+          <span class="btn-icon">&#10084;</span>
+          <span>Putar Lagi</span>
+        </button>
+        <button id="btn-hug" class="btn-secondary" type="button">
+          <span class="btn-icon">&#10084;</span>
+          <span>Peluk Virtual</span>
+        </button>
+      </div>
+    </div>
+  </section>
+
+  <!-- Virtual Hug -->
+  <div id="hug-overlay" class="hug-overlay hidden">
+    <canvas id="hearts-canvas"></canvas>
+    <p id="hug-text" class="hug-text"></p>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
